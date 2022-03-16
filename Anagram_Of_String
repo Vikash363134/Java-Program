@@ -1,0 +1,26 @@
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+	String a="This is a boy";
+	String b="This is a boy";
+	a=a.replace(" ","");
+	b=b.replace(" ","");
+	a=a.toLowerCase();
+	b=b.toLowerCase();
+	char x[]=a.toCharArray();
+	char y[]=b.toCharArray();
+	Arrays.sort(x);
+	Arrays.sort(y);
+	boolean result=Arrays.equals(x,y);
+	if(result==true)
+	{
+	    System.out.println("I am Anagram");
+	}
+	else
+	{
+	System.out.println("I am Not Anagram");    
+	}
+	
+	}
+}
