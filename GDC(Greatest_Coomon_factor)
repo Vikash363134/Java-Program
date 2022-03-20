@@ -1,0 +1,19 @@
+public class Main
+{
+	public static void main(String[] args) {
+     int a=13;
+     int b=8;
+     while(b!=0)
+     {
+         if(a>b)
+     {
+         a=a-b;
+     }
+     else
+     {
+         b=b-a;
+     }
+     }
+     System.out.println(a);
+	}
+  }
