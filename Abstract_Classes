@@ -1,0 +1,24 @@
+abstract class A{
+    abstract void d();
+       
+}
+
+class C extends A{
+    void d()
+    {
+        System.out.println("Bad");
+    }
+}
+class E extends A{
+    void d()
+    {
+        System.out.print("Good");
+    }
+}
+class Main{
+    public static void main(String[] args){
+        A obj=new E();
+        obj.d();
+    }
+}
+    
