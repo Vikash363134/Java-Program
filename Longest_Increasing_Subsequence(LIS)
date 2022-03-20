@@ -1,0 +1,31 @@
+public class Main
+{
+	public static void main(String[] args) {
+	int a[]={10,2,9,33,21,50,41,58,60};
+	int n=a.length;
+	int lis[]=new int[n];
+	int max=0;
+	for(int i=0;i<lis.length;i++)
+	{
+	    lis[i]=1;
+	}
+	for(int i=1;i<n;i++)
+	{
+	    for(int j=0;j<n;j++)
+	    {
+	        if(a[i]>a[j] && lis[i]<lis[j]+1)
+	        {
+	            lis[i]=lis[j]+1;
+	        }
+	    }
+	}
+	for(int i=0;i<n;i++)
+	{
+	    if(max<lis[i])
+	    {
+	        max=lis[i];
+	    }
+	}
+	System.out.println(max);
+	}
+}
