@@ -1,0 +1,23 @@
+public class Main
+{
+	public static void main(String[] args) {
+	int n=153;
+	int r,c=n,arm=0;
+	while(n>0)
+	{
+	    r=n%10;
+	    arm=(r*r*r)+arm;
+	    n=n/10;
+	}
+	if(arm==c)
+	{
+	    System.out.print("Yes Armgston");
+	}
+	else
+	{
+	     System.out.print("Not Armgston");
+	}
+	
+	
+	}
+}
