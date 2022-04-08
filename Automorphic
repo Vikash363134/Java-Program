@@ -1,0 +1,23 @@
+public class Main
+{
+	public static void main(String[] args) {
+	int n=625;
+	int square=n*n;
+	int count=0;
+	int temp=n;
+	while(temp>0)
+	{
+	    temp=temp/10;
+	    count++;
+	}
+	int lastDigit=(int)(square%(Math.pow(10,count)));
+	if(lastDigit==n)
+	{
+	    System.out.println("Automorphic");
+	}
+	else
+	{
+	    System.out.println("Not Automorphic");
+	}
+	}
+}
