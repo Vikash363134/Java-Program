@@ -1,0 +1,35 @@
+import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
+public class Main
+{
+	public static void main(String[] args) {
+	    System.out.println("Enter Roman Digit: ");
+	    Scanner sc=new Scanner(System.in);
+	    String s=sc.nextLine();
+
+	int n=s.length();
+	int output=0;
+	HashMap<Character,Integer> roman=new HashMap<>();
+	roman.put('I', 1);
+    roman.put('V', 5);
+    roman.put('X', 10);
+    roman.put('L', 50);
+    roman.put('C', 100);
+    roman.put('D', 500);
+    roman.put('M', 1000);
+	for(int i=0;i<n;i++)
+	{
+	    if(i<n-1 && roman.get(s.charAt(i))<roman.get(s.charAt(i+1)))
+	    {
+	        output+=roman.get(s.charAt(i+1))-roman.get(s.charAt(i));
+	        i++;
+	    }
+	    else
+	    {
+	        output+=roman.get(s.charAt(i));
+	    }
+	}
+	System.out.println(output);
+	}
+}
