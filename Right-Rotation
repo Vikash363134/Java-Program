@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		 int ar[]={10,22,20,9,41,30,40,50,80,36,37};
+		 int size=ar.length;
+		 int b[]=new int[size];
+		 System.out.println("Enter the position to shift right");
+		 Scanner sc=new Scanner(System.in);
+		 int pos=sc.nextInt();
+		 int j=0;
+		 for(int i=size-pos;i<ar.length;i++)
+		 {
+		     
+		         b[j++]=ar[i];
+		    
+		 }
+		for(int i=0;i<size-pos;i++)
+		 {
+		       b[j++]=ar[i];
+	
+		 }
+		
+		 for(int i=0;i<b.length;i++)
+		 {
+		     System.out.print(b[i]+" ");
+		 } 
+	
+	}
+}
