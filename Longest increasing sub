@@ -1,0 +1,33 @@
+class HelloWorld {
+    public static void main(String[] args) {
+       int ar[]={10,22,20,9,41,30,40,50,80,36,37};
+       int maxlen=1,currlen=1,fiml=0;
+       for(int i=1;i<ar.length;i++)
+       {
+           if(ar[i]>ar[i-1])
+           {
+               currlen++;
+           }
+           else
+           {
+               if(maxlen<currlen)
+               {
+                   maxlen=currlen;
+                   fiml=i-maxlen;
+               }
+               currlen=1;
+           }
+       }
+       if(maxlen<currlen)
+       {
+           maxlen=currlen;
+           fiml=ar.length-maxlen;
+       }
+       for(int i=fiml;i<fiml+maxlen;i++)
+       {
+           System.out.println(ar[i]+" ");
+       }
+       System.out.println();
+       System.out.println("Length of the longest increasing Subarray(Lis) is :"+ maxlen);
+    }
+}
